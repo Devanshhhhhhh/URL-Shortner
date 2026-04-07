@@ -1,15 +1,17 @@
+require('dotenv').config();
 const express = require("express");
+const cors = require("cors");
 const urlRoute = require("./routes/url");
 const { connectToMongoose } = require("./connect");
 const URL = require("./models/url");
 
-
 const app = express();
-const PORT = 8001;
+const PORT = process.env.PORT || 8001;
 
+app.use(cors());
 app.use(express.json());
 
-connectToMongoose("mongodb://localhost:27017/url-shortner")
+connectToMongoose(process.env.MONGODB_URI || "mongodb://localhost:27017/url-shortner")
     .then(() => console.log("MongoDb connected succesfully!"))
     .catch((err) => console.error("MongoDB connection error:", err));
 
@@ -44,5 +46,5 @@ app.get("/:shortId", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server listening on port: ${PORT}`); 
+    console.log(`Se rver listening on port: ${PORT}`); 
 })

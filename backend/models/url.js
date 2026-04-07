@@ -3,16 +3,16 @@ const mongoose = require("mongoose");
 const urlSchema = new mongoose.Schema({
     shortId : {
         type : String,
-        require : true,
+        required : true,
         unique : true
     },
     redirectURL : {
         type : String,
         required: true
     },
-    visitHistory : [{ timeStamp : { time: Number}}]
+    visitHistory : [{ timestamp : Number }]
 },
-    {timeStamps : true}
+    {timestamps : true}
 );
 
 const URL = mongoose.model("url", urlSchema);

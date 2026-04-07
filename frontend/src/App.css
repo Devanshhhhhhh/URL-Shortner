@@ -1,0 +1,17 @@
+/* h1 {
+    font-family:'Press start 2P',monospace;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+} */
+
+h1 {
+    font-family: 'Press Start 2P', monospace;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: black;
+    letter-spacing: 0.2rem;
+    cursor:default;
+    margin-top: 5rem;
+}

@@ -1,0 +1,116 @@
+.input-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.input-url {
+    margin-top: 4rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Press Start 2P', monospace;
+    border: 2px solid black;
+    color: rgb(109, 109, 109);
+    background-color: white;
+    box-shadow: 3px 3px 0px black;
+    border-bottom: 2px solid #333;
+    outline: none;
+    
+}
+
+.squeeze-button {
+    font-family: 'Press Start 2P', monospace;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #000;
+    background-color: white;
+    color: black;
+    cursor: -moz-grab;
+    transition: all 0.2s ease;
+    box-shadow: 3px 3px 0px black;
+    border-bottom: 3px solid #333;
+}
+
+.squeeze-button:hover {
+    opacity: 0.9;
+}
+
+.squeeze-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #000;
+}
+
+
+.error {
+    color: #ff0000;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    text-align: 1rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8rem;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.result-container {
+    margin-top: 2rem;
+    text-align: center;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.result-container p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.result-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.shortened-url {
+    font-size: 0.9rem;
+    color: #0066cc;
+    word-break: break-all;
+}
+
+.copy-button {
+    font-family: 'Press Start 2P', monospace;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 0px black;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.copy-button:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px black;
+}
+
+.copy-button:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px black;
+}
+
+.squeeze-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #e0e0e0;
+}
