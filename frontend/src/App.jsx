@@ -2,6 +2,7 @@ import './App.css'
 import Actions from "./components/Action"
 import {useState} from 'react'
 import InputURL from "./components/InputURL"
+import QRGenerator from "./components/QRGenerator"
 
 function App() {
 
@@ -15,7 +16,11 @@ function App() {
     <>
       <Actions onTabChange={handleTabChange}/>
       <h1> URL SQUEEZER </h1>
-      <InputURL/>
+
+      {currentView === 'shorten' && <InputURL/>}
+      {currentView === 'QR Generator' && <QRGenerator/>}
+      {currentView === 'Analytics' && <Analytics/>}
+
     </>
   )
 }
