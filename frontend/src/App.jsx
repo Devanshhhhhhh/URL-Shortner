@@ -18,8 +18,8 @@ function App() {
       <h1> URL SQUEEZER </h1>
 
       {currentView === 'shorten' && <InputURL/>}
-      {currentView === 'QR Generator' && <QRGenerator/>}
-      {currentView === 'Analytics' && <Analytics/>}
+      {currentView === 'QR Generator' && <InputURL/>}
+      {currentView === 'Analytics' && <InputURL/>}
 
     </>
   )
