@@ -10,6 +10,9 @@ const urlSchema = new mongoose.Schema({
         type : String,
         required: true
     },
+    qrCode :{
+        type : String,
+    },
     visitHistory : [{ timestamp : Number }]
 },
     {timestamps : true}

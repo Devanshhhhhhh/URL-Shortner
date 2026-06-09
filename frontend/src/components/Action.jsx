@@ -28,14 +28,6 @@ const Action = ({onTabChange}) => {
                         `tab-button ${activeTab === 'QR Generator' ? 'active' : ''}`
                     }
                 > QR Generator </button>
-
-                <button
-                    onClick={() => handleTabClick('analytics')}
-                    className={
-                        `tab-button ${activeTab === 'analytics' ? 'active' : ''}`
-                    }
-                    
-                > Analytics </button>
             </div>
         </>
     )
